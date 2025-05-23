@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+  
+  <div class="gallery">
+    
+    <div class="item feature">
+      <img data-key='1' src='https://tinyurl.com/y2qr6d9z' alt='' />
+      <div class='arrow arrow-left'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3521175/arrow-left.svg' />
+      </div>
+      <div class='arrow arrow-right'><img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3521175/arrow-right.svg' /></div>
+    </div>
+
+    <div class="item small">
+      <img data-key='1' src='https://tinyurl.com/y2qr6d9z' alt='' />
+    </div>
+    <div class="item small">
+      <img data-key='2' src='https://tinyurl.com/y444ugpz' alt='' />
+    </div>
+    <div class="item small">
+      <img data-key='3'  src='https://tinyurl.com/y5quqfal' alt=''>
+    </div>
+    <div class="item small">
+      <img data-key='4' src='https://tinyurl.com/y5t6oacf' alt=''>
+    </div>
+    <div class="item small">
+      <img data-key='5' src='https://tinyurl.com/y2dlrkku' alt=''>
+    </div>
+    <div class="item small">
+      <img data-key='6' src='https://tinyurl.com/y57vjxpe' alt=''></div>
+  </div>
+
+  
+  
+  <div class="blog">
+    <h2> Interactive image gallery with buttons and clickable thumbnails</h2>
+<p>So I underestimated how much extra Javascript it would take to add the left and right buttons to navigate through the gallery. Adding a couple of buttons should be a quick job, right?</p>
+
+  <p>Wrong. The overall process is simple, but the exact method takes a little planning.</p>
+  <ol>
+    <li> Find out which image is currently in the large box.</li>
+    <li> Decide which image needs to replace it when a button is pressed.</li>
+    <li> Change the image. </li>
+  </ol>
+  
+  <p> To do this, you need a unique identifier for each image, preferably a number. I added a attribute called 'data-key' to each of my html image tags. </p>
+  
+  <p> Once you've calculated the new data-key, you need to somehow find out the URL for the image that corresponds with the key. I chose to create an array of image URLs using a map function. This meant I didn't have to go searching through the node-list of small images every single time a button was pressed.</p>
+  
+  <p>The real lesson learned here is to keep on learning the fundamentals of Javascript and data-structures. I guess I could have hacked something together without the array.from and map functions. I'd hate to think how many lines of code that would take.</p>
+  </div>
+  
+</body>
+</html>
